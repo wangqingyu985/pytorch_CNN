@@ -34,5 +34,16 @@
 
 3.使用Batch Normalization加速训练过程，同时解决梯度消失和梯度爆炸的问题，丢弃dropout层
 
-## MobileNet--
+## MobileNet--2017年
 
+之前的提特征网络过于庞大、参数过多，不利于移动端设备开发。
+
+1.通过Depthwise Convolution减少参数量
+
+2.增加超参数α：控制卷积核个数、β：控制图像输入大小
+
+## ShuffleNet--2017年
+
+1.
+
+2.
