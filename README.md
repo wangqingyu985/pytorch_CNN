@@ -34,16 +34,35 @@
 
 3.使用Batch Normalization加速训练过程，同时解决梯度消失和梯度爆炸的问题，丢弃dropout层
 
-## MobileNet--2017年
+## MobileNet v1--2017年
 
-之前的提特征网络过于庞大、参数过多，不利于移动端设备开发。
+正常的卷积：
 
-1.通过Depthwise Convolution减少参数量
+![微信图片_20210323092007](D:\Users\HUWEI\Desktop\微信图片_20210323092007.png)
 
-2.增加超参数α：控制卷积核个数、β：控制图像输入大小
+![微信图片_20210323092013](D:\Users\HUWEI\Desktop\微信图片_20210323092013.png)
+
+问题：之前的普通convolution构成的backbone参数过多，不利于移动端设备开发。
+
+1.通过Depthwise Convolution（卷积核的channel恒定为1）和Pointwise Convolution（卷积核的大小恒定为1，其余特征和普通卷积相同）减少参数量
+
+DW+PW组成的卷积效果和普通卷积是相同的，但是大大减少了参数的量。
+
+2.增加超参数α：控制卷积核个数、β：控制图像输入大小。
+
+## MobileNet v2--2018年
+
+1.倒残差结构（先升维后降维，且采用ReLu6激活函数）
+
+2.linear bottlenecks
 
 ## ShuffleNet--2017年
 
 1.
 
 2.
+
+## EfficientNet--2019年
+
+
+
